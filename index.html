@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azure Language Translator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-grid"></div>
+
+    <main class="app-shell">
+
+        <!-- Slide 1 -->
+        <section class="panel slide active" id="slide1">
+            <div class="brand-row">
+                <div class="logo-dot"></div>
+                <span>AZURE AI TRANSLATOR</span>
+            </div>
+
+            <h1>Translate Anything.<br>Beautifully.</h1>
+
+            <p class="subtitle">
+                Enterprise-grade language translation with a refined user experience.
+                Secure credentials, elegant transitions, instant results.
+            </p>
+
+            <div class="form-grid">
+                <div class="input-card">
+                    <label>Subscription Key</label>
+                    <input type="password" id="key" placeholder="Paste Azure key">
+                </div>
+
+                <div class="input-card">
+                    <label>Region</label>
+                    <input type="text" id="region" placeholder="e.g. eastus">
+                </div>
+            </div>
+
+            <button class="primary-btn" onclick="goNext()">
+                Continue
+            </button>
+
+            <div class="feature-box">
+                <h3>Why this experience stands out</h3>
+                <ul>
+                    <li>Modern premium interface</li>
+                    <li>Fast cloud translation</li>
+                    <li>Trusted Azure backend</li>
+                    <li>Designed to retain users</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Slide 2 -->
+        <section class="panel slide hidden" id="slide2">
+            <div class="top-bar">
+                <div class="brand-row">
+                    <div class="logo-dot"></div>
+                    <span>TRANSLATOR DASHBOARD</span>
+                </div>
+
+                <button class="ghost-btn" onclick="goBack()">Back</button>
+            </div>
+
+            <h1 class="small-title">Instant Smart Translation</h1>
+
+            <p class="subtitle">
+                Type your sentence, choose target language, and get professional results instantly.
+            </p>
+
+            <div class="translate-layout">
+
+                <div class="left-side">
+                    <div class="input-card">
+                        <label>Sentence</label>
+                        <textarea id="text" placeholder="Write something here..."></textarea>
+                    </div>
+
+                    <div class="input-card">
+                        <label>Translate To</label>
+                        <select id="lang">
+                            <option value="hi">Hindi</option>
+                            <option value="fr">French</option>
+                            <option value="es">Spanish</option>
+                            <option value="de">German</option>
+                            <option value="ja">Japanese</option>
+                            <option value="it">Italian</option>
+                            <option value="ko">Korean</option>
+                        </select>
+                    </div>
+
+                    <button class="primary-btn full" onclick="translateText()">
+                        Translate Now
+                    </button>
+                </div>
+
+                <div class="right-side">
+                    <div class="result-card">
+                        <div class="result-head">Result</div>
+                        <div id="result">Your translated text will appear here...</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
